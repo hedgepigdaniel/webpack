@@ -16,7 +16,7 @@
     "optimist": "~0.6.0",
     "supports-color": "^3.1.0",
     "tapable": "~0.1.8",
-    "uglify-js": "~2.6.0",
+    "uglify-js": "~2.7.3",
     "watchpack": "^0.2.1",
     "webpack-core": "~0.6.0"
   },
@@ -83,7 +83,7 @@
     "beautify-lint": "node ./scripts/beautify-check",
     "beautify": "node ./scripts/beautify-rewrite",
     "precover": "npm run lint && npm run beautify-lint",
-    "cover": "istanbul cover -x *.runtime.js node_modules/mocha/bin/_mocha",
+    "cover": "istanbul cover -x **/*.runtime.js node_modules/mocha/bin/_mocha",
     "publish-patch": "npm run lint && npm run beautify-lint && mocha && npm version patch && git push && git push --tags && npm publish"
   }
 }
